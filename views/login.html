@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="form sign-in-container">
+      <form action="/login" method="post" role="form" autocomplete="off">
+        <h1>Log In</h1>
+        <input id="username" name='username' placeholder="Nombre de usuario" type="text" required>
+        <input id="password" name='password' placeholder="Password" type="password" required>
+        <button>Sign In</button>
+      </form>
+      <button class="btn btn-success my-3" onclick="location.href = '/register'">Ir a Register</button>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-right">
+          <h1>Crear cuenta</h1>
+          <p>Crea una cuenta si todavia no tienes una.</p>
+          <button class="signup_btn" onclick="location.href = '/register'">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
