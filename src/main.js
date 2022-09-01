@@ -22,6 +22,9 @@ import { conectarDB } from "./controllerdb.js";
 import config from "./config.js";
 import dotenv from "dotenv";
 import randomApiRouter from "./routers/api/randoms.js";
+
+import { schema } from './graphql/index.js';
+import { graphqlHTTP } from 'express-graphql';
 //--------------------------------------------
 // instancio servidor, socket y api
 
@@ -58,6 +61,14 @@ app.use(
     cookie: {
       maxAge: 60000,
     },
+  })
+);
+
+app.use(
+  '/graphql',
+  graphqlHTTP({
+      schema,
+      graphiql: true
   })
 );
 
