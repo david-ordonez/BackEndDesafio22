@@ -5,20 +5,20 @@ export default class ServicioMensajes {
         this.mensajesApi = mensajesApi;
     }
 
-    async obtenerProductos(){
+    async obtenerMensajes(){
         return await this.mensajesApi.listarAll();
     }
 
-    async obtenerProducto(id) {
+    async obtenerMensaje(id) {
         return await this.mensajesApi.listar(id);
     }
 
-    async guardarProducto(producto){
-        return await this.mensajesApi.guardar(producto);
+    async guardarMensaje(mensaje){
+        return await this.mensajesApi.guardar(mensaje);
     }
 
-    async actualizar(producto){
-        return await this.mensajesApi.actualizar(producto);
+    async actualizar(mensaje){
+        return await this.mensajesApi.actualizar(mensaje);
     }
 
     async borrar(id){
